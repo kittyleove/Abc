@@ -1,0 +1,84 @@
+Weather Information Application - README
+Overview
+This JavaFX application provides real-time weather information and forecasts for locations worldwide by connecting to the OpenWeatherMap API. The application features a user-friendly interface with current weather data and 8-day forecasts.
+
+Features
+Current Weather Data: Displays temperature, humidity, wind speed, and conditions
+
+8-Day Forecast: Shows daily weather predictions
+
+Unit Conversion: Toggle between Celsius and Fahrenheit
+
+Search History: Stores previously searched locations
+
+Weather Icons: Visual representation of weather conditions
+
+Responsive UI: Clean and intuitive interface
+
+Prerequisites
+Java JDK 17 or later
+
+JavaFX SDK 17 or later
+
+Internet connection (for API access)
+
+OpenWeatherMap API key (free tier available)
+
+Installation
+Clone this repository or download the source files
+
+Open the project in IntelliJ IDEA
+
+Add JavaFX SDK to your project libraries:
+
+File → Project Structure → Libraries → Add JavaFX SDK
+
+Add required dependencies:
+
+org.json library for JSON processing
+
+Configuration
+Obtain a free API key from OpenWeatherMap
+
+Replace the placeholder in WeatherAPIService.java:
+
+java
+Copy
+private static final String API_KEY = "your_api_key_here";
+How to Run
+Set up Run Configuration in IntelliJ:
+
+Main class: WeatherApp
+
+VM options:
+
+Copy
+--module-path "path_to_javafx_sdk/lib" --add-modules javafx.controls,javafx.fxml
+Click the Run button (green arrow)
+
+Usage Guide
+Enter a location name in the search field
+
+Click "Search" or press Enter
+
+View current weather and forecast
+
+Use the dropdown to switch temperature units
+
+Double-click on search history items to revisit locations
+
+Technical Details
+Main Class: WeatherApp.java - Contains UI and application logic
+
+API Service: WeatherAPIService.java - Handles API communication
+
+Data Format: JSON responses from OpenWeatherMap API
+
+UI Components: JavaFX (Labels, TextFields, Buttons, etc.)
+
+Troubleshooting
+API Errors: Verify your API key and internet connection
+
+JavaFX Issues: Ensure correct SDK path in VM options
+
+Missing Dependencies: Confirm org.json library is properly added
